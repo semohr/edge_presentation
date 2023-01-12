@@ -43,7 +43,7 @@ $$
  
 <Note>
 
-Here we have a single device with limited compute capacity. We offload the task to a edge server
+Here again we have a single device with limited compute capacity. We offload the task to a edge server
 if the time it takes to compute the task on the device (t_k) is greater than the latency deadline tau.
 
 Additionally, we might offload the taask from the edge to the cloud if the task on the edge takes longer
@@ -52,5 +52,10 @@ than the communcation plus the server compute latency.
 This all looks realitve simple but if you have multiple devices and servers such as heterogeneous communication
 between device this can blow up in complexity very quickly.
 
+I hope this gets you thinking abit on how you might want to approach these system architecture problems from the perspective of modeling each component.
+
+Next I have prepared two application examples:
+
+[next]
 
 </Note>
