@@ -1,0 +1,60 @@
+## Motivation
+
+<img src="edge/smog.png" style={{
+    height:"100%", position: "absolute",
+    top: 0,
+    padding: "2rem"}
+    }/>
+
+<div
+    style={{
+        position: 'absolute',
+        bottom: '0',
+        right: '0',
+        padding: '1rem',
+        fontSize: '1.2rem'
+    }}
+>
+    <a href="https://labs.openai.com/">Mohr & DALL·E 2</a>
+</div>
+
+
+<Navbar sections={false} />
+
+
+<Note>
+To kick of a presentation I always like to start with a hypothetical szenario:
+
+
+- Imageine you are in charge of a city. As mayor you take a stroll threw your empire and notice alot of smog and air pollution because of all the cars waiting at intersections.
+
+[next] (image smog)
+
+- You want to improve the lives of your citizen and thus take a look at the problem. You quickly notice that the traffic lights are not adapting to the current traffic situation nor to other metrics
+such as the air quality.
+
+- You decide to take action and start to think about how you could improve the situation. You opt to install sensor throught the city to measure the air quality and the traffic situation and want to react to it in real time.
+
+[next] (image sensors)
+
+- You first opt for a typical cloud computing approach. All of the data from the sensors is transmitted to a central server in the cloud for processing and storage.
+
+- However, you quickly notice that your main bottleneck is the internet connection to this central server. You bought quite dedicated hardware and you are collecting data faster than transmittable over your internet connections as you spend all your money on sensors and forgot to upgrade the networking in the city there is not much you can do about it.
+
+- Additionally you are not really happy with storing all data at a centrealized location because of 
+security concerns.
+
+This is where the idea of edge computing might be handy:
+
+- You opt to deploy small servers throughout the city, which injest the data from the nearby sensors and process the data before further transmission to traffic controllers or to other servers throughout the city. 
+
+[next] (image edge)
+
+- As your algorithm makes decisions based on local data you do not need to transmit all data to a central server.
+
+- This reduces the amount of the data that needs to be transmitted and also reduces the response time of the system in total as the bottleneck of this application was the connection to the central server.
+
+[next] 
+
+Introduction
+</Note>

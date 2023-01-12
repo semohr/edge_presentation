@@ -1,0 +1,39 @@
+---
+layout: row
+---
+
+<Column>
+## Resource orchestration
+
+### Example (energy constrained)
+
+Single device with limited battery. Thus we want to optimize the
+energy consumption of the device.
+
+We offload the task if:
+$$
+\begin{align*}
+E_d &>  &E_c &+ E_i \\
+p_d  \frac{\omega}{f_d} &> &p_c\frac{L}{B} &+ p_i \frac{\omega}{f_i}
+\end{align*}
+$$
+
+
+</Column>
+
+
+<Navbar sections={false} />
+
+ 
+<Note>
+
+
+For instance we might consider a simple system with a single device and edge server. Our device has a limited battery capacity. Here we might offload computations to increase device lifetime. 
+
+Very simple we can just draw a decision boundry. If the Energy needed to compute a task on the device is greater than the energy needed to communicate and the idle energy consumption of the device we offload the task.
+
+We can apply the same approach to latency if this is a concern.
+
+[next]
+
+</Note>

@@ -1,0 +1,46 @@
+---
+layout: row,edge
+---
+
+<Column>
+## Resource orchestration
+
+Optimizing the task scheduling and orchestration by:
+
+<ul style={{fontSize:"2.5rem", paddingBottom:"2rem"}}>
+    <li>Latency</li>
+    <li>Energy efficiency</li>
+    <li>Throughput</li>
+    <li>Bandwidth usage</li>
+    <li>Resource utilization</li>
+    <li>Reliability</li>
+    <li>Security</li>
+</ul>
+
+</Column>
+<Navbar sections={false} />
+
+
+<Note>
+
+There are many different metrics that can be used to optimize an edge computing system, as the specific requirements will depend on the particular application and use case. However, here are a few common metrics that are often used to evaluate the performance and efficiency of an edge computing system:
+
+Most predominantly and the things we considered so far:
+- **Latency**: The time it takes for a request to be processed and a response to be returned. Lower latency can be important for real-time applications such as video streaming or online gaming.
+- **Energy consumption**: The amount of energy used by the edge computing system, which can be important for battery-powered or energy-sensitive devices.
+
+Additionally but less predominant in the literature we have
+- **Throughput**: The number of requests that can be processed per second. High throughput can be important for applications that handle a large number of concurrent users or high-volume data streams. Here preprocessing or clustering concurrent user using 
+edge server might be benefitial.
+- **Bandwidth usage**: The amount of network bandwidth used by the edge computing system, which can be important for constrained network environments.
+- **Reliability**: The ability of a system to operate as intended under normal and abnormal conditions. This can include metrics like uptime, error rate, mean-time-to-failure, Mean-time-to-repair. Depending on the importance of the task a more reliable but slower server might be selected.
+- **Security**: The security of the edge computing system, which can be important for applications that handle sensitive data or require high levels of privacy. Here some devices might recive a security metric and the orchestration might consider this metric as well.
+
+Of course depending on the application a mixture of this metrics can be considered.
+
+[next]
+
+For instance we might consider a simple system with a single device and edge server. Our device has a limited battery capacity 
+
+
+</Note>

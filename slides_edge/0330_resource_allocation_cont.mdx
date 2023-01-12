@@ -1,0 +1,51 @@
+---
+layout: row
+---
+
+<Column>
+## Resource orchestration
+
+### Example (latency)
+
+Single device with limited compute capacity.
+
+<div style={{display:"flex"}}>
+<div>
+<p style={{textAlign:"center", padding:0, paddingTop:"2rem"}}>Offload to edge if:</p>
+$$
+\begin{align*}
+t_k &> \tau\\
+\frac{\omega_k}{f_k} &> \tau
+\end{align*}
+$$
+</div>
+<div>
+<p style={{textAlign:"center", padding:0, paddingTop:"2rem"}}>Offload to cloud if:</p>
+$$
+\begin{align*}
+t_c + t_{s,k} &> \tau\\
+\frac{L}{b} + \frac{\omega_k}{f_{s,k}} &> \tau
+\end{align*}
+$$
+</div>
+</div>
+
+</Column>
+
+
+<Navbar sections={false} />
+
+ 
+<Note>
+
+Here we have a single device with limited compute capacity. We offload the task to a edge server
+if the time it takes to compute the task on the device (t_k) is greater than the latency deadline tau.
+
+Additionally, we might offload the taask from the edge to the cloud if the task on the edge takes longer
+than the communcation plus the server compute latency.
+
+This all looks realitve simple but if you have multiple devices and servers such as heterogeneous communication
+between device this can blow up in complexity very quickly.
+
+
+</Note>

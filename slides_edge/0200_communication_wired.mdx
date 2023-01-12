@@ -1,0 +1,50 @@
+---
+layout: row,edge
+---
+
+<Column style={{width:"300%", fontSize:"2rem"}}>
+
+## Communication (Wired)
+
+Most common approximation of communication time with bit pipe abstraction.
+
+$$
+t_c = \frac{L}{b}
+$$
+
+<Params>
+- $L$ Data size (bytes)
+- $b$ Bandwidth (bytes/s)
+</Params>
+
+-> Too simplified for wireless communication
+
+</Column>
+
+<Column>
+
+<img src="edge/communication.png" style={{display: "block", width:"auto", height:"80%"}} />
+<a href="https://www.flaticon.com/free-icons/lan" title="lan icons">Icons created by Freepik - Flaticon</a>
+
+</Column>
+
+<Navbar sections={false} />
+
+<Note>
+Communication has to be performed between edge devices and the edge server or the cloud. There a a variety of possible
+technologies which can be used, e.g. Ethernet or optical cable, wifi, NFC, satelite and so on. But these can be 
+split into two subgroups wired and wireless.
+
+Wired connections generally provide faster transfer rates and lower latency. Wired also offers a more consistent connection and is more reliable but wireless is more flexible and does not require any physical connection.
+
+Most commonly used it the bit pipe abstraction. Here we just assume a constant bandwidth b and calculate the time needed to transfer the data using the input data size L.
+
+In realistic settings one might need to consider multiple devices sharing the same bandwidth. Here one could also work with priorty but this might also introduce a lot of complexity and might even introduce overhead.
+
+The energy used for wired communication is normally much lower than the energy consumption for computation. Thus it is normally neglected but depending on the technology on might want to introduce a small term accounting for the energy consumption.
+
+Overall, this abstraction might hold well for wired communication, but is too simplified and inaccurate for wireless communication.
+
+[next]
+
+</Note>

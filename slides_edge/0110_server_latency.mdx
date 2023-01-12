@@ -1,0 +1,77 @@
+---
+layout: row
+---
+
+<Column style={{width:"300%", fontSize:"2rem"}}>
+
+## Edge server computational latency
+
+<div style={{display:"flex", gap:"4rem"}}>
+<div>
+### Parallel workload
+
+$$
+t_{s,k} = \frac{\omega_k}{f_{s,k}}
+$$
+
+### Sequential workload
+
+$$
+T_{s,k} = \sum_{i\leq k } t_{s,i}
+$$
+
+
+</div>
+
+<div>
+
+### Degradation 
+
+Performance degradation due to multiple tasks on the same server e.g. VMs. 
+
+$\epsilon$ degradation factor (deployment specific)
+
+$$
+T'_{s,k} = T_{s,k} (1+\epsilon)^n
+$$
+
+</div>
+</div>
+</Column>
+
+<Column>
+
+<img src="edge/edge_server.png" style={{display: "block", width:"auto", height:"auto"}} />
+
+<div
+    style={{
+        position: 'absolute',
+        bottom: '0',
+        right: '0',
+        padding: '1rem',
+        fontSize: '1.2rem'
+    }}
+>
+<a href="https://ieeexplore.ieee.org/abstract/document/6473795">Bruneo, A Stochastic Model to Investigate Data Center Performance and QoS in IaaS Cloud Computing Systems, 2013</a>
+</div>
+
+
+</Column>
+
+<Navbar sections={false} />
+
+<Note>
+
+    The server side looks very similar at least for the latency. Here again the latency is only related on the allocated frequency of the server s for a device k and its workload in cycles (here omega).
+    
+    Additionally one might want to introduce sequential loads. Sequential loads are just the sum of all computational latencys or the sum of all execution times.
+
+    Additionally, a degradation factor might be introduced to account for I/O interfence among different VMs operations or multiple VMs sharing the same physical machine.
+
+    As a remark in the standard cloud computing paradigm the computational latency of the cloud is negligible as the available resources normally outweight the task by alot, but for smaller edge server this might not be the case.
+
+    Again on paper this looks quite doable and easy to calculate but in reality one might need to consider dynamic frequency allocation, multiple users and other factors. These considerations could most likely fill a lecture on their own but if interested I can recommend the following paper from Bruneo which goes into
+    alot of detail on this topic.
+
+    [next]
+</Note>

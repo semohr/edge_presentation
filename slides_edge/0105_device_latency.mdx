@@ -1,0 +1,64 @@
+---
+layout: row,edge
+---
+
+<Column style={{width:"300%"}}>
+
+## Edge devices computational latency
+
+
+The time it takes to exectute a task $A(L,\tau,X)$ on an edge device can be expressed as:
+
+$$
+t_d = \frac{L  X}{f_d} = \frac{\omega}{f_d}
+$$
+
+
+
+<Params>
+-   $f_d$ CPU frequency of device (Hz, 1/s)
+-   $\omega$ Number of cpu cycle for task
+-   $L$ Data size (byte)
+-   $X$ Computational intensity (1/byte)
+</Params>
+
+
+</Column>
+
+<Column>
+
+<img src="edge/edge_devices.png" style={{height:"100%"}}/>
+
+</Column>
+
+<Navbar sections={false} />
+
+<Note>
+
+Let's consider devices next. As the main goal of edge computing is to offload tasks from devices we need to define some measures and relationships.
+
+Some tasks might take too long on the device to compute thus we might want to offload them to a server. Generally, the execution time of a task A on a device can be calculated using:
+
+f - cpu frequency of device (Hz, 1/s)
+
+And the task
+L - data size (bytes)
+X - computational intensity (cyles per byte)
+
+
+Here:
+t - time it takes to execute a task on an edge device (s)
+or 
+omega is sometimes used - number of cpu cycle for the task 
+
+On the surface this looks quite easy, but the cpu frequency of a device might not be static or might change depending on the load of the device or the general power conspumption policy. Thus more considerations are needed to get a more accurate measure of the execution time of a task on a device but this is a good first order approximation.
+
+As edge computing is mostly interested in low power and also mobile and/or wireless devices we also need to consider the power consumption of a device. E.g. a mobile device might not be able to compute a task because of limited battery capacity. 
+
+Here we dont want to manually change the battery often, thus minimizing the power consumption or maximizing the lifetime of such a device has some priority.
+
+[next]
+
+The power...
+
+</Note>

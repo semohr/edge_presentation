@@ -1,0 +1,58 @@
+---
+layout: row,edge
+---
+
+<Column style={{width:"300%", position:"relative"}}>
+
+## Edge devices energy consumption
+
+Energy needed for the computation of a task $A(L,\tau,X)$:
+
+$$
+E_d = \kappa L X f_d^2 = \kappa \omega f_d^2
+$$
+
+<Params>
+-   $\kappa$ Device specific constant (Js^2)
+-   $f_d$ CPU frequency of device (Hz, 1/s)
+-   $\omega$ Number of cpu cycle for task
+-   $L$ Data size (byte)
+-   $X$ Computational intensity (1/byte)
+</Params>
+
+
+<div
+    style={{
+        position: 'absolute',
+        bottom: '0',
+        right: '0',
+        padding: '1rem',
+        fontSize: '1.1rem',
+    }}
+>
+<a href="https://link.springer.com/chapter/10.1007/978-3-642-55224-3_74">Vogeleer et al., The Energy/Frequency Convexity Rule: Modeling and Experimental Validation on Mobile Devices</a>
+</div>
+</Column>
+
+<Column>
+
+<img src="edge/edge_devices.png" style={{height:"100%"}}/>
+
+</Column>
+
+<Navbar sections={false} />
+
+
+<Note>
+
+The power consumption of a device for a given task is not trivially but it can be shown using circuit theory and experimental validation, that power consumption of a cpu task is roughtly proportional to the frequency squared. 
+This is not easy to show but if you are interested in the deriviation you might want to have a look at the Vogeleer paper.
+
+Here we can use again or tasks input data and computational intensity to determine the number of cpu cycles needed for a task. And thus
+using this proportionallity the energy required to compute this task E.
+
+In the formula, the kappa constant is device specific. You might need to run some experiments to determine this constant for your specific device. But overall it is just a scaling factor.
+
+[next]
+
+</Note>

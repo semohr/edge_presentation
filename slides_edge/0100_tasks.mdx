@@ -1,0 +1,53 @@
+---
+layout: row,edge
+---
+
+<Column style={{width:"300%"}}>
+
+## Tasks
+
+Generally task in the edge framwork can be defined by their
+
+<Params>
+- $L$ Input data size (bytes)
+- $\tau$ Deadline (seconds)
+- $X$ Computational intensity (cylces per byte)
+</Params>
+
+$$
+A(L, \tau, X)
+$$
+
+</Column>
+
+<Column>
+
+<img src="edge/task_graph.png" style={{height:"100%"}}/>
+
+</Column>
+
+
+<Navbar sections={false} />
+
+<Note>
+
+First I want to start with defining a task.
+
+Generally, a task in the edge paradigm can be defined by their input data size, deadline and computational intensity.
+Instead of using the number of cycles directly we opt to use the computational intensity which is the number of cycles per byte in the input data. 
+
+We do this because we want to be able to use the same definitons for communication and computation. In communication we need to know the data size to compute e.g. the latency.
+
+As always a programm or application can be split up into a number of tasks which depend on each other. This can be seen as a directed acyclic graphs (DAGs), an example on the right. Here each of these nodes might be a task be offloaded to a server.
+
+Some tasks might not be able to be offloaded. For example, 
+- node A might be an input task which can only be executed on the device
+- The same might be applied to the last node here e.g. a displaying task might be performed
+
+These specific tasks should not go into the resource orchastration or should not be considered differently.
+
+Here again the important part as we will use it again later is that a Task in the edge paradigm is defined by its input data size, an arbitraty deadline and computational intensity.
+
+[next]
+
+</Note>

@@ -1,0 +1,52 @@
+---
+layout: row,edge
+---
+<Column style={{width:"300%", fontSize:"2rem"}}>
+
+## Edge server energy consumption
+
+Alternative energy consumption model for servers:
+
+$$
+E_s = \alpha E_{max} + (1-\alpha) E_{max} u
+$$
+
+
+<Params>
+-   $u$ Utilization of server
+-   $\alpha$ fraction of idle energy consumption
+-   $E_{max}$ Maximum energy consumption of server (J)
+</Params>
+
+
+</Column>
+
+<Column>
+
+
+<img src="edge/edge_server.png" style={{display: "block", width:"auto", height:"auto"}} />
+
+</Column>
+
+<Navbar sections={false} />
+
+<Note>
+    
+    More than for a mobile device the energy consumption of a edge server is jointly determined by the usage of CPU, memory, storage and network interfaces.
+
+    But normally the CPU contriubtion is the dominant among these factors and in first approximation we can again assume that the energy consumption is proportional to the frequency squared. 
+
+    Thus we can just sum all contributions of tasks to get the total energy consumption of the server.
+
+    Alternativly, or other observations have show that server energy consumption is linear to cpu utilization ratio.
+    
+    [next]
+    This thus depends on the current load of the server. Additionlly it was observed, that as an idle server still consumes up to 70% of its maximum energy consumption.
+
+    Taking this into account we can introduce a utilization u, a maximum Energy consumption E_max, and a fraction of the idle energy consumption alpha. This gives us an alternative model for the energy consumption of a server which might be more realistic.
+
+    [next]
+
+    
+
+</Note>

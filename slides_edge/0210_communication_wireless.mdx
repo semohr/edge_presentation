@@ -1,0 +1,68 @@
+---
+layout: row,edge
+---
+
+<Column style={{width:"300%", fontSize:"2rem"}}>
+
+## Communication (Wireless)
+
+
+### Typical problems in wireless transmission:
+
+<ul style={{fontSize:"2.5rem", width:"60%"}}>
+    <li> Atmospheric ducting, reflection and refraction from scattering objects in the environment</li>
+    <li> Interference with other broadcasted signals</li>
+</ul>
+
+-> Introduces errors in the transmission and thus greater transfer latency
+
+</Column>
+
+<Column>
+
+<img src="edge/communication.png" style={{display: "block", width:"auto", height:"80%"}} />
+<a href="https://www.flaticon.com/free-icons/lan" title="lan icons">Icons created by Freepik - Flaticon</a>
+
+</Column>
+
+
+
+<Navbar sections={false} />
+
+<Note>
+
+
+The simplification does not consider 
+
+- atmospheric ducting, reflection and refraction from scattering objects in the environment. Think about walls or trees between the transmitter and the receiver. This is in theory prevented using the well known multipath fading but ther might still be errors in the transmission or inconsistencies in the bandwidth.
+
+- Than there is interference with other broadcasted signals. This can for exa,ple be caused by other devices in the same frequency band. Especially important if thinking about urban settings, where alot of devices share the same frequency bands. 
+
+Sure there are a number of technologies in the wirless communication standards to prevent this, but errors and inconsistencies in the bandwidth can still occur.
+
+There are a number of ways to model the wireless communication, accuracy and rigerosity depending on the application or research goal. 
+
+[next]
+
+I like to show you an example of a simple stochastic models here with alot of parallels to the bit pipe model which we have seen earlier, for the wired connection.
+
+Instead of considering a constant bandwidth we introduce a random variable which represents the bandwidth. This means that the bandwidth is not constant but can vary depending on the underlying distribution b_w. One could for example also
+opt to introduce a time dependency here as one might expect more errors on the weekend than during the week. This variable can be motivated by experiments.
+
+Here a basicly modeled this by a weibull distribution, which is identified by its long tail.
+
+[next]
+
+This might look as follows, here on the left side we see samples of the bandwidth. On the right side we can now have a look at the time it takes to transfer a 1gb file. I have added the sigma bands to show the likelihood of
+transmitting within a time.
+
+For instance take the dot dash line for the onesided two sigma test. This roughlty tanslates to the transfer is done in approximatly 4.8s in 95% of the cases.
+
+
+Again this might be not the most accurate model, as this might also depend on the distance between the transmitter and the receiver. But it gives another perspective on the problem and might be a good starting point and first order approximation.
+
+For more insights into this topic I can recommend the paper by ma at all which goes into great detail of wifi sensing capabilities and the underlying physical properties.
+
+[next]
+
+</Note>
