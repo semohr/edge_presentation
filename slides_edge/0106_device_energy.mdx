@@ -2,7 +2,7 @@
 layout: row,edge
 ---
 
-<Column style={{width:"300%", position:"relative"}}>
+<Column style={{width:"300%"}}>
 
 ## Edge devices energy consumption
 
@@ -27,16 +27,16 @@ $$
         bottom: '0',
         right: '0',
         padding: '1rem',
-        fontSize: '1.1rem',
+        fontSize: '1.2rem'
     }}
 >
-<a href="https://link.springer.com/chapter/10.1007/978-3-642-55224-3_74">Vogeleer et al., The Energy/Frequency Convexity Rule: Modeling and Experimental Validation on Mobile Devices</a>
+<a href="https://link.springer.com/chapter/10.1007/978-3-642-55224-3_74">Vogeleer et al., The Energy/Frequency Convexity Rule: Modeling and Experimental Validation on Mobile Devices, 2014</a>
 </div>
 </Column>
 
 <Column>
 
-<img src="edge/edge_devices.png" style={{height:"100%"}}/>
+<img src="edge/edge_devices.png" style={{height:"100%", paddingBottom:"1rem"}}/>
 
 </Column>
 
@@ -46,12 +46,12 @@ $$
 <Note>
 
 The power consumption of a device for a given task is not trivially but it can be shown using circuit theory and experimental validation, that power consumption of a cpu task is roughtly proportional to the frequency squared. 
+
 This is not easy to show but if you are interested in the deriviation you might want to have a look at the Vogeleer paper.
 
-Here we can use again or tasks input data and computational intensity to determine the number of cpu cycles needed for a task. And thus
-using this proportionallity the energy required to compute this task E.
+Here we can use again, the number of cpu cycles omega to compute the task and by using this proportionallity we can compute the energy consumption of the device.
 
-In the formula, the kappa constant is device specific. You might need to run some experiments to determine this constant for your specific device. But overall it is just a scaling factor.
+In the formula, the kappa constant is device specific. You might need to run some experiments to determine this constant for a specific device. But overall it is just a scaling factor which is not as important as the frequency.
 
 [next]
 

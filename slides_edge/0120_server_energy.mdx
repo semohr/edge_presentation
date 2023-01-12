@@ -29,19 +29,26 @@ $$
 <Navbar sections={false} />
 
 <Note>
+
     More than for a mobile device the energy consumption of a edge server is jointly determined by the usage of CPU, memory, storage and network interfaces.
 
     But normally the CPU contriubtion is the dominant among these factors and in first approximation we can again assume that the energy consumption is proportional to the frequency squared. 
 
-    Thus we can just sum all contributions of tasks to get the total energy consumption of the server.
+    Using the same formula from before, we can just sum all contributions of running tasks to get the total energy consumption of the server.
 
-    Alternativly, or other observations have show that server energy consumption is linear to cpu utilization ratio. Which depends on the current load. It was also observed that an idle server still consumes up 
+    Alternativly, or other observations have show that espically for data center servers energy consumption is linear to cpu utilization ratio. Which depends on the current load. It was also observed that an idle server still consumes up 
     to 70% of its maximum energy consumption.
 
     [next]
 
     Thus we can introduce a utilization u and a maximum Energy consumption E_max and a fraction of the idle energy consumption alpha. This gives us an alternative model for the energy consumption of a server which might be more realistic.
 
-    [next]
+    It is not super clear if this hold for every edge server as these are pretty heterogeneous. These could e.g. be a small rack server for more hpc like tasks or a single old computer e.g. for home automation. All depending on your application.
+
+    For hpc this should definetly hold. 
+
+    
+
+    [next]    
 
 </Note>

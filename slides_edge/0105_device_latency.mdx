@@ -14,7 +14,6 @@ t_d = \frac{L  X}{f_d} = \frac{\omega}{f_d}
 $$
 
 
-
 <Params>
 -   $f_d$ CPU frequency of device (Hz, 1/s)
 -   $\omega$ Number of cpu cycle for task
@@ -22,12 +21,11 @@ $$
 -   $X$ Computational intensity (1/byte)
 </Params>
 
-
 </Column>
 
 <Column>
 
-<img src="edge/edge_devices.png" style={{height:"100%"}}/>
+<img src="edge/edge_devices.png" style={{height:"100%", paddingBottom:"1rem"}}/>
 
 </Column>
 
@@ -42,18 +40,17 @@ Some tasks might take too long on the device to compute thus we might want to of
 f - cpu frequency of device (Hz, 1/s)
 
 And the task
-L - data size (bytes)
-X - computational intensity (cyles per byte)
+- L data size (bytes)
+- X computational intensity (cyles per byte)
 
 
-Here:
-t - time it takes to execute a task on an edge device (s)
-or 
-omega is sometimes used - number of cpu cycle for the task 
+To calculate the time it takes to execute a task on a device we can use this simple formula
 
-On the surface this looks quite easy, but the cpu frequency of a device might not be static or might change depending on the load of the device or the general power conspumption policy. Thus more considerations are needed to get a more accurate measure of the execution time of a task on a device but this is a good first order approximation.
+Here we take the input size and computational intensity to calculate the number of cpu cycles needed to execute the task. Then we divide this number by the cpu frequency of the device to get the time it takes to execute the task.
 
-As edge computing is mostly interested in low power and also mobile and/or wireless devices we also need to consider the power consumption of a device. E.g. a mobile device might not be able to compute a task because of limited battery capacity. 
+On the surface this looks quite easy, but the cpu frequency of a device might not be static or might change depending on the load of the device or the general power conspumption policy. Thus more considerations are needed to get a more accurate measure of the execution time of a task but this is a good first order approximation. One can always add more complexity to the model.
+
+As edge computing is mostly interested in low power and also mobile and/or wireless devices we also need to consider the power consumption of such a device. E.g. a mobile device might not be able to compute a task because of limited battery capacity. 
 
 Here we dont want to manually change the battery often, thus minimizing the power consumption or maximizing the lifetime of such a device has some priority.
 

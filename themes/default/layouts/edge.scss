@@ -1,21 +1,23 @@
 .Params {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 
-    :global(.math) {
-        font-size: inherit;
-    }
-    ul {
-        font-size: 2rem !important;
-    }
-    p {
-        font-size: 2rem !important;
-        text-align: center !important;
-    }
+  :global(.math) {
+    font-size: inherit;
+  }
+  ul {
+    font-size: 2rem !important;
+  }
+  p {
+    font-size: 2rem !important;
+    text-align: center !important;
+  }
+
+
 }
 
 .Question {
-    p {
-        font-size: 3rem !important;
-        text-align: center !important;
-    }
+  p {
+    font-size: 3rem !important;
+    text-align: center !important;
+  }
 }

@@ -62,16 +62,16 @@ $$
 
 <Note>
 
-    The server side looks very similar at least for the latency. Here again the latency is only related on the allocated frequency of the server s for a device k and its workload in cycles (here omega).
+    The server side looks very similar at least for the latency. Here again the latency is only related on the allocated frequency of the server s for a task k and its workload of the task again in cycles (here omega).
     
-    Additionally one might want to introduce sequential loads. Sequential loads are just the sum of all computational latencys or the sum of all execution times.
+    Additionally one might want to introduce sequential loads as a edge server might only have limited cpu cores. Sequential loads are just the sum of all computational latencys or the sum of all execution times.
 
-    Additionally, a degradation factor might be introduced to account for I/O interfence among different VMs operations or multiple VMs sharing the same physical machine.
+    Additionally, a degradation factor might be introduced to account for I/O interfence among different VMs operations or multiple VMs sharing the same physical machine. 
 
     As a remark in the standard cloud computing paradigm the computational latency of the cloud is negligible as the available resources normally outweight the task by alot, but for smaller edge server this might not be the case.
 
-    Again on paper this looks quite doable and easy to calculate but in reality one might need to consider dynamic frequency allocation, multiple users and other factors. These considerations could most likely fill a lecture on their own but if interested I can recommend the following paper from Bruneo which goes into
-    alot of detail on this topic.
-
+    Again on paper this looks quite doable and easy to calculate but in reality one might need to consider dynamic frequency allocation, multiple users and other factors. These considerations could most likely fill a lecture on their own but if interested I can recommend the following paper from Bruneo where they introduce a stochastic model to model 
+    data center infrastructure.
+    
     [next]
 </Note>
